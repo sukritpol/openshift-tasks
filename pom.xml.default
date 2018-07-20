@@ -227,13 +227,11 @@
           <plugin>
               <groupId>org.owasp</groupId>
               <artifactId>dependency-check-maven</artifactId>
-              <version>3.2.1</version>
+              <version>2.1.1</version>
               <configuration>
-                  <cveUrl12Modified>http://13.250.100.122/nvdcve-modified.xml.gz</cveUrl12Modified>
-                  <cveUrl20Modified>http://13.250.100.122/nvdcve-2.0-modified.xml.gz</cveUrl20Modified>
-                  <cveUrl12Base>http://13.250.100.122/nvdcve-%d.xml</cveUrl12Base>
-                  <cveUrl20Base>http://13.250.100.122/nvdcve-2.0-%d.xml</cveUrl20Base>
-              </configuration>  
+                  <skipProvidedScope>true</skipProvidedScope>
+                  <skipRuntimeScope>true</skipRuntimeScope>
+              </configuration>
               <reportSets>
                   <reportSet>
                       <reports>
