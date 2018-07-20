@@ -229,10 +229,10 @@
               <artifactId>dependency-check-maven</artifactId>
               <version>2.1.1</version>
               <configuration>
-                  <cveUrl12Modified>http://13.250.100.122/2018-07-19/nvdcve-modified.xml.gz</cveUrl12Modified>
-                  <cveUrl20Modified>http://13.250.100.122/2018-07-19/nvdcve-2.0-modified.xml.gz</cveUrl20Modified>
-                  <cveUrl12Base>http://13.250.100.122/2018-07-19/nvdcve-%d.xml</cveUrl12Base>
-                  <cveUrl20Base>http://13.250.100.122/2018-07-19/nvdcve-2.0-%d.xml</cveUrl20Base>
+                  <cveUrl12Modified>http://13.250.100.122/nvdcve-modified.xml.gz</cveUrl12Modified>
+                  <cveUrl20Modified>http://13.250.100.122/nvdcve-2.0-modified.xml.gz</cveUrl20Modified>
+                  <cveUrl12Base>http://13.250.100.122/nvdcve-%d.xml</cveUrl12Base>
+                  <cveUrl20Base>http://13.250.100.122/nvdcve-2.0-%d.xml</cveUrl20Base>
               </configuration>
               <reportSets>
                   <reportSet>
