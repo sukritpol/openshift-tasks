@@ -50,6 +50,9 @@
         <!-- maven-compiler-plugin -->
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
+	<dependency-check-format>XML</dependency-check-format>
+        <dependency-check-failBuildOnCVSS>11</dependency-check-failBuildOnCVSS>
+        <dependency-check-failBuildOnAnyVulnerability>false</dependency-check-failBuildOnAnyVulnerability>
     </properties>
 
     <repositories>
@@ -287,6 +290,24 @@
 		          </reportSet>
 		        </reportSets>
 		      </plugin>
+	      <plugin>
+                <groupId>org.owasp</groupId>
+                <artifactId>dependency-check-maven</artifactId>
+                <version>3.0.2</version>
+                <configuration>
+                    <failBuildOnCVSS>${dependency-check-failBuildOnCVSS}</failBuildOnCVSS>
+                    <failBuildOnAnyVulnerability>${dependency-check-failBuildOnAnyVulnerability}</failBuildOnAnyVulnerability>
+                    <format>${dependency-check-format}</format>
+                    <suppressionFile>${basedir}/suppression.xml</suppressionFile>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
       </plugins>
   </reporting>
 
